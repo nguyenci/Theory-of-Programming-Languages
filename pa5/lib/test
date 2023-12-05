@@ -1,0 +1,7 @@
+sortIntDesc' :: Ord a -> [Int] -> [Int]
+sortIntDesc' _ xs = 
+   let dIntDict = MkOrd(flip Prelude.compare)
+   in sort dIntDict xs
+
+sortIntDesc' _ xs = sort dIntDict xs
+    where dIntDict = MkOrd(flip Prelude.compare)
